@@ -1,0 +1,5 @@
+{
+  "name": "Gemini Dual-Engine Chat",
+  "description": "A sophisticated AI chatbot featuring two specialized modes: High-Intelligence Pro (Gemini 3 Pro) for complex reasoning and Low-Latency Flash (Gemini 2.5 Flash Lite) for lightning-fast responses.",
+  "requestFramePermissions": []
+}

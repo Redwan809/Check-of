@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RedX AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tokyo-night-dark.min.css" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+      
+      body {
+        font-family: 'Inter', 'Hind Siliguri', sans-serif;
+        background-color: #0d0d0d;
+        color: #ececec;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .custom-scrollbar::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: #262626;
+        border-radius: 10px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+        background: #333333;
+      }
+
+      .claude-input-shadow {
+        box-shadow: 0 4px 30px -5px rgba(0, 0, 0, 0.7);
+      }
+
+      /* Logo Animations */
+      @keyframes neonPulse {
+        0%, 100% { filter: drop-shadow(0 0 2px #ff4d4d) drop-shadow(0 0 5px #ff4d4d); }
+        50% { filter: drop-shadow(0 0 5px #ff4d4d) drop-shadow(0 0 15px #ff4d4d); }
+      }
+
+      .logo-pulse {
+        animation: neonPulse 3s infinite ease-in-out;
+      }
+
+      /* Markdown Content Styling */
+      .markdown-content {
+        line-height: 1.7;
+        color: #d1d1d1;
+      }
+      .markdown-content h1, .markdown-content h2, .markdown-content h3 {
+        font-weight: 700;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        color: #ffffff;
+      }
+      .markdown-content h1 { font-size: 1.75rem; border-bottom: 1px solid #262626; padding-bottom: 0.5rem; }
+      .markdown-content h2 { font-size: 1.4rem; }
+      .markdown-content h3 { font-size: 1.2rem; }
+      
+      .markdown-content p {
+        margin-bottom: 1.25rem;
+      }
+
+      .markdown-content ul, .markdown-content ol {
+        margin-bottom: 1.25rem;
+        padding-left: 1.5rem;
+      }
+      .markdown-content ul { list-style-type: disc; }
+      .markdown-content ol { list-style-type: decimal; }
+      .markdown-content li { margin-bottom: 0.5rem; }
+
+      .markdown-content code:not(pre code) {
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 0.9em;
+        background-color: #262626;
+        color: #ff4d4d;
+        padding: 0.2rem 0.5rem;
+        border-radius: 6px;
+        font-weight: 500;
+      }
+
+      .markdown-content blockquote {
+        border-left: 4px solid #ff4d4d;
+        background-color: #1a1a1a;
+        padding: 1rem 1.5rem;
+        font-style: italic;
+        color: #bbb;
+        margin-bottom: 1.5rem;
+        border-radius: 0 8px 8px 0;
+      }
+
+      .markdown-content table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 1.5rem;
+        font-size: 0.9rem;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .markdown-content th, .markdown-content td {
+        border: 1px solid #262626;
+        padding: 0.85rem;
+        text-align: left;
+      }
+      .markdown-content th {
+        background-color: #171717;
+        font-weight: 700;
+        color: #ffffff;
+      }
+
+      /* Interactive Box Specific */
+      .config-box-shadow {
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+      }
+      
+      .option-button-active {
+        box-shadow: 0 0 15px rgba(255, 77, 77, 0.2);
+      }
+
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Animation for smooth UI transition */
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      .animate-fade-up {
+        animation: fadeInUp 0.4s ease-out forwards;
+      }
+    </style>
+    <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "marked": "https://esm.sh/marked@12.0.0",
+    "dompurify": "https://esm.sh/dompurify@3.0.9",
+    "highlight.js": "https://esm.sh/highlight.js@^11.9.0"
+  }
+}
+</script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
